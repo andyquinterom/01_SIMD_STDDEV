@@ -1,0 +1,19 @@
+[package]
+name = "ultra-paralelismo"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+rayon = "1.12.0"
+
+[dev-dependencies]
+criterion = { version = "0.8.2", features = ["csv_output", "html_reports"] }
+proptest = "1"
+rand = "0.10.2"
+
+[[bench]]
+name = "standard_deviation"
+harness = false
+
+[lib]
+bench = false
